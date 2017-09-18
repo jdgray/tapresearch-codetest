@@ -1,0 +1,44 @@
+.error {
+  padding: 20px;
+  border: 1px sold #EBCCCC;
+  background-color: #F2DEDE;
+  color: #A94442;
+  border-radius: 5px; }
+
+.container {
+  padding: 4px; }
+
+.survey {
+  padding: 20px;
+  background-color: #F7F7F9;
+  border: 1px solid #F7F7F9;
+  border-radius: 5px; }
+  .survey input {
+    width: 20%;
+    padding: 10px;
+    font-size: 14px; }
+  .survey button {
+    padding: 10px;
+    font-size: 14px; }
+
+.survey-link {
+  background-color: #DFF0D8;
+  border-radius: 5px;
+  padding: 20px; }
+
+.App {
+  text-align: center; }
+
+.App-logo {
+  height: 80px; }
+
+.App-header {
+  background-color: #2AC5E7;
+  height: 150px;
+  padding: 20px;
+  color: white; }
+
+.App-intro {
+  font-size: large; }
+
+/*# sourceMappingURL=App.css.map */
