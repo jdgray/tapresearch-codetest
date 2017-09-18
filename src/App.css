@@ -25,6 +25,18 @@
   background-color: #DFF0D8;
   border-radius: 5px;
   padding: 20px; }
+  .survey-link button {
+    color: #fff;
+    background-color: #5bc0de;
+    border-color: #5bc0de;
+    font-weight: 400;
+    line-height: 1.25;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 1rem;
+    padding: 10px;
+    min-width: 200px;
+    border: 1px solid transparent; }
 
 .App {
   text-align: center; }
@@ -40,3 +52,5 @@
 
 .App-intro {
   font-size: large; }
+
+/*# sourceMappingURL=App.css.map */

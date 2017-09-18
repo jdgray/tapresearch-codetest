@@ -28,18 +28,20 @@ class Survey extends React.Component {
     if (!this.state.userIdentifier) {
         return this.setState({error: 'User identifier required'});
     }
-
+    
+    //
+    // uses local server api to avoid cors issues on local
+    //
     axios.get(`http://localhost:4000/api/survey/${this.state.userIdentifier}`)
       .then((res) => {
 
-
         if (res.error) {
-          this.setState({error: 'Error getting survey'});
+          this.handleError('Error getting survey');
         } else {
           var data = res.data.data;
           // hanlde offer logic
           if (!data.has_offer) {
-            this.setState({error: 'No survey available'});
+            this.handleError('No survey available');
           } else {
             const offer = {
               link: data.offer_url,
@@ -47,20 +49,36 @@ class Survey extends React.Component {
               max: data.message_hash.max,
               currency: data.message_hash.currency
             };
-            this.setState({offer: offer});
+            this.setState({error: '', offer: offer});
           }
 
         }
 
       })
       .catch((error) => {
-        this.setState({error: 'Unhandled error'});
+        this.handleError('Unhandled error');
       });
 
   }
 
+  handleError(error) {
+    this.setState({
+      error: error,
+      offer: {
+        link: '',
+        min: 0,
+        max: 0,
+        currency: ''
+      }
+    });
+  }
+
   handleChange(event) {
-    this.setState({userIdentifier: event.target.value});
+    if (event.target.value.length > 32) {
+      this.handleError('User identifier must be <= 32 characters')
+    } else {
+      this.setState({userIdentifier: event.target.value});
+    }
   }
 
   render() {
