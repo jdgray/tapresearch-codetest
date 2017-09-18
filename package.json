@@ -1,0 +1,25 @@
+{
+  "name": "tap-research-code-test",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "axios": "0.16.2",
+    "body-parser": "1.18.1",
+    "express": "4.15.4",
+    "express-jsend": "0.1.0",
+    "node-sass-chokidar": "0.0.3",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-scripts": "1.0.13",
+    "redux": "^3.7.2",
+    "cors": "2.8.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "build-css": "node-sass-chokidar src/ -o src/",
+    "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive"
+  }
+}
