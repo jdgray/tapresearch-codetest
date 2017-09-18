@@ -17,7 +17,7 @@ app.use(function(req, res, next) {
 app.use(bodyParser.json());
 
 // api
-app.use('/api/survey', require('./server/api/survey'));
+app.use('/api/survey', require('./api/survey'));
 
 // error handler
 app.use(function(err, req, res, next) {
