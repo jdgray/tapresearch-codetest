@@ -26,7 +26,7 @@ class Survey extends React.Component {
   handleClick = () => {
 
     if (!this.state.userIdentifier) {
-        this.handleError('User identifier required');
+      return this.handleError('User identifier required');
     }
     
     //
@@ -56,7 +56,7 @@ class Survey extends React.Component {
 
       })
       .catch((error) => {
-        this.handleError('Unhandled error');
+        this.handleError('System error');
       });
 
   }
