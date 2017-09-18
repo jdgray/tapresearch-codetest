@@ -4,7 +4,7 @@ const axios = require('axios');
 require('express-jsend');
 
 //
-// GET bu identifier
+// GET by identifier
 //
 router.get('/:user', function (req, res) {
 
