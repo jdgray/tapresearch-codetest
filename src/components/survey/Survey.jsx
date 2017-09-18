@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import axios from 'axios';
 import Error from '../error/Error';
 import SurveyLink from '../survey-link/SurveyLink';
@@ -26,7 +26,7 @@ class Survey extends React.Component {
   handleClick = () => {
 
     if (!this.state.userIdentifier) {
-        return this.setState({error: 'User identifier required'});
+        this.handleError('User identifier required');
     }
     
     //

@@ -10,9 +10,9 @@ class App extends Component {
           <img src={process.env.PUBLIC_URL + 'square-100.png'} className="App-logo" alt="logo" />
           <h2>Tap Research - Code Test</h2>
         </div>
-        <p className="App-intro">
+        <div className="App-intro">
           <Survey />
-        </p>
+        </div>
       </div>
     );
   }

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './SurveyLink.scss';
 
 class SurveyLink extends React.Component {

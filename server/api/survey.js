@@ -1,6 +1,6 @@
-var express = require('express');
-var router = express.Router();
-var axios = require('axios');
+const express = require('express');
+const router = express.Router();
+const axios = require('axios');
 require('express-jsend');
 
 //
@@ -10,7 +10,7 @@ router.get('/:user', function (req, res) {
 
     try {
 
-        var user = req.param('user');
+        const user = req.params.user;
 
         if (!user) {
             return res.jerror('error', "User indentifier required");
@@ -20,13 +20,13 @@ router.get('/:user', function (req, res) {
             api_token: '9a7fb35fb5e0daa7dadfaccd41bb7ad1',
             device_identifier: '',
             user_identifier: user
-          })
-            .then(response => {
-                res.jsend(response.data);
-            })
-            .catch(error => {
-                res.jerror('error', error);
-            });
+        })
+        .then(response => {
+            res.jsend(response.data);
+        })
+        .catch(error => {
+            res.jerror('error', error);
+        });
 
     } catch (error) {
         res.jerror('error', error);
